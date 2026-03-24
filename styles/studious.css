@@ -1,0 +1,162 @@
+echo "# Studious" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/kmmccain/Studious.git
+git push -u origin main
+body { 
+	font-family: Georgia, serif;
+	font-size: 25px;
+	background-image: url(../image/background.jpg);
+	background-size: 2500px;
+	display: flex;
+	flex-direction: column;
+}
+#wrapper { margin-left: auto;
+		   margin-right: auto;
+		   width: 80%
+} 
+header { margin-left: auto;
+		 margin-right: auto;
+		 width: 80%
+}
+body {
+      font-family: Georgia, serif;
+	  font-size: 25px;
+	  }
+h1 { color: #003366; 
+	 font-size: 100px;
+     padding-left: 175px; 
+	 padding-top: 50px;
+}
+#container { background-image: url(../image/studious.jpg);
+			 background-repeat: no-repeat;
+			 background-size: 150px;
+			 Background-color: #FFE4C4;
+			 background-position: 75px;
+			 height: 200px;
+             width: 950px;
+             margin-right: auto;
+             margin-left: auto;
+}
+main { background-color: #FFE4C4; 
+	   padding: 100px;
+	   background-color: #FFE4C4;
+	   color: #003366;
+	   margin-top: auto;
+	   margin-right: auto;
+	   margin-left: auto;
+}
+
+
+h2 { color: #000000; 
+     font-family: Georgia, serif;
+}
+h3 { 
+	color: #003366;
+	font-family: Georgia, serif;
+	font-weight: bold;
+	font-size: 30px;
+	text-align: center;
+}
+h3 a:hover { color: #E9967A;}
+p {
+	font-size: 30px;
+}
+.desc {
+	font-weight: bold;
+	font-size: 30px;
+}
+.column {
+    padding: 50px;
+}
+.row {
+	margin-bottom: 100px;
+}
+#bust { 
+		float: right;
+		margin: 30px;
+}
+#image1 {
+	float: right;
+	padding: 75px;
+}
+#image2 {
+	float: right;
+	padding: 75px;
+}
+#image3 {
+	float: right;
+	padding: 75px;
+}
+#image4 {
+	float: right;
+	padding: 75px;
+}
+#image5 {
+	float: right;
+	padding: 75px;
+}
+#image6 {
+	float: right;
+	padding: 75px;
+}
+#image7 {
+	float: right;
+	padding: 75px;
+}
+#image8 {
+	float: right;
+	padding: 75px;
+}
+nav ul { list-style-type: none;
+         font-size: 40px;
+		 text-align: center;
+         margin: 35px;
+		 background-color: #E9967A;
+		 word-spacing: 100px;
+		 border: 2px;
+		 border-style: solid;
+		 border-color: #FFE4C4;
+}
+nav li { display: inline; }
+nav a  { text-decoration: none; 
+         padding: 10px; 	 
+}
+nav a:link { color: #A0522D; }
+nav a:visited { color: #FFE4C4; }
+nav a:hover { color: #003366; }	
+
+footer { 
+         font-size: 60%;
+		 text-align: center;
+         margin: 100px;
+		 background-color: #E9967A;
+		 padding-bottom: 20px;
+		 border: 2px;
+		 border-style: solid;
+		 border-color: #FFE4C4;
+}
+footer ul {list-style-type: none;
+         font-size: 40px;
+		 text-align: center;
+         margin: 35px;
+		 word-spacing: 100px;
+		
+}
+footer li { display: inline; 
+}
+footer a  { text-decoration: none; 
+         padding: 10px; 
+		 color: #FFE4C4;
+}
+footer a:hover { color: #003366;}
+
+/* Media Query for Mobile */
+@media (min-width: 600px){
+}
+
+/* Media Query for Desktop */
+@media (min-width: 1024px){
+}

@@ -1,5 +1,5 @@
-/*  Case Study Project 02 
-    Estimate page for calculating the cost of a student art piece
+/*  Case Study Project 03
+    Advice/Review page
     
 
     Author: Kassidy Anders
@@ -75,3 +75,57 @@ function formatCurrency(value) {
     }
 
 });
+
+    // =========================
+    // 4. REVIEW/ADVICE SECTION
+    // =========================
+let reviewers = ["DaisyDesigns", "SketchyStart", "LateNightDesigner", "PixelPioneer"];
+let reviewType = ["", ""]
+let stars = [5, 2, 1, 4];
+let reviewDates = ["04/02/2026","03/14/2026", "02/28/2026", "01/19/2026"];
+let reviews = [
+   "Pay attention to the projects that don't feel like a chore. The stuff you enjoy doing is probably what you should be doing. I wish I had followed this advice sooner in my career.",
+   "Ask for feedback often. Other people can usually spot your strengths and weaknesses better than you can. Don't be afraid to ask for feedback from your peers, professors, or even professionals in the field. It can be scary to hear criticism, but it's necessary for growth.",
+   "Don't compare yourself to others. It's easy to get caught up in comparing yourself to other artists, but it's important to remember that everyone has their own unique journey. Focus on your own growth and progress, and don't worry about what others are doing.",
+   "Don't be afraid to ask for help. I used to think that asking for help was a sign of weakness, but it's actually a sign of strength. It shows that you're willing to learn and grow.",
+];
+
+for (let i = 0; i < reviewers.length; i++) {
+        let reviewCode = "";
+
+            reviewCode += "<table>";
+
+            reviewCode += "<tr><th>By</th><td>" + reviewers[i] + "</td></tr>";
+            reviewCode += "<tr><th>Review Date</th><td>" + reviewDates[i] + "</td></tr>";
+            reviewCode += "<tr><td colspan='2'>" + reviews[i] + "</td></tr>";
+            reviewCode += "</table>";
+
+      document.getElementsByTagName("article") [0].insertAdjacentHTML("beforeEnd", reviewCode);
+}
+
+    // =========================
+    // 5. LEAVE ADVICE FORM
+    // =========================
+
+  const form = document.getElementById("adviceForm");
+  const list = document.getElementById("adviceList");
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const date = document.getElementById("date").value;
+    const advice = document.getElementById("advice").value;
+
+    const entry = document.createElement("div");
+    entry.classList.add("entry");
+
+    entry.innerHTML = `
+      <div class="meta"><strong>${name}</strong> • ${date}</div>
+      <div>${advice}</div>
+    `;
+
+    list.prepend(entry);
+
+    form.reset();
+  });

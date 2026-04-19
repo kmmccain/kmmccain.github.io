@@ -1,17 +1,96 @@
-/*  Case Study Project 03
-    Advice/Review page
+/*  Case Study Project 04
+    Gallery Slideshow
     
 
     Author: Kassidy Anders
-    Date: 04/04/2026
+    Date: 04/17/2026
 
     Filename: Studious.js
- */
+ */  
+
+    // =========================
+    // 1. SLIDESHOW GENERATOR
+    // =========================
+
+window.addEventListener("load", function () {
+   createLightbox("lightbox1", galleries[0]);
+   createLightbox("lightbox2", galleries[1]);
+   createLightbox("lightbox3", galleries[2]);
+});
+
+function createLightbox(lightboxId, gallery) {
+
+   let lightBox = document.getElementById(lightboxId);
+
+   let imgFiles = gallery.images;
+   let imgCaptions = gallery.captions;
+   let imgCount = imgFiles.length;
+
+   let currentImg = 1;
+
+   // Create elements
+   let lbTitle = document.createElement("h1");
+   let lbCounter = document.createElement("div");
+   let lbPrev = document.createElement("div");
+   let lbNext = document.createElement("div");
+   let lbImages = document.createElement("div");
+
+   // Title
+   lbTitle.id = "lbTitle";
+   lbTitle.textContent = gallery.title;
+   lightBox.appendChild(lbTitle);
+
+   // Counter
+   lbCounter.id = "lbCounter";
+   lbCounter.textContent = currentImg + " / " + imgCount;
+   lightBox.appendChild(lbCounter);
+
+   // Images container
+   lbImages.id = "lbImages";
+   lightBox.appendChild(lbImages);
+
+   // Add images
+   for (let i = 0; i < imgCount; i++) {
+      let image = document.createElement("img");
+      image.src = imgFiles[i];
+      image.alt = imgCaptions[i];
+      image.onclick = createOverlay;
+      lbImages.appendChild(image);
+   }
+
+   // Overlay function
+   function createOverlay() {
+      let overlay = document.createElement("div");
+      overlay.className = "lbOverlay";
+
+      let figureBox = document.createElement("figure");
+
+      let overlayImage = this.cloneNode(true);
+      let overlayCaption = document.createElement("figcaption");
+      overlayCaption.textContent = this.alt;
+
+      figureBox.appendChild(overlayImage);
+      figureBox.appendChild(overlayCaption);
+
+      overlay.appendChild(figureBox);
+
+      let closeBox = document.createElement("div");
+      closeBox.className = "lbOverlayClose";
+      closeBox.innerHTML = "&times;";
+      closeBox.onclick = function () {
+         document.body.removeChild(overlay);
+      };
+
+      overlay.appendChild(closeBox);
+
+      document.body.appendChild(overlay);
+   }
+}
 // Wrap everything in DOMContentLoaded to ensure elements exist
 document.addEventListener("DOMContentLoaded", function() {
 
     // =========================
-    // 1. ART COST CALCULATOR
+    // 2. ART COST CALCULATOR
     // =========================
 const ADEN1_PRICE = 25;
 const BUCH2_PRICE = 40;
@@ -44,7 +123,7 @@ function formatCurrency(value) {
 }
 
     // =========================
-    // 2. FORM SUBMISSION
+    // 3. FORM SUBMISSION
     // =========================
     const form = document.getElementById('contactForm');
     const successMessage = document.getElementById('successMessage');
@@ -55,23 +134,6 @@ function formatCurrency(value) {
             successMessage.style.display = 'block';
             form.reset();
         });
-    }
-
-    // =========================
-    // 3. IMAGE MODAL
-    // =========================
-    window.openModal = function(img) {
-        const modal = document.getElementById("imageModal");
-        const modalImg = document.getElementById("modalImg");
-        if(modal && modalImg) {
-            modal.style.display = "block";
-            modalImg.src = img.src;
-        }
-    }
-
-    window.closeModal = function() {
-        const modal = document.getElementById("imageModal");
-        if(modal) modal.style.display = "none";
     }
 
 });

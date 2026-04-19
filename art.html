@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="styles/studious.css" rel="stylesheet">
 <script src="scripts/studious.js"></script>
+<script src="scripts/lightbox.js"></script>
 <meta name="description" content="Introduction to Gallery">
 </head>
 <body>
@@ -25,113 +26,16 @@
 		</ul>
 	</nav>
 <!-- Main Content Section -->
+ <h3> Welcome to the Gallery</h3>
 <main>
-    <!-- Piece 1 -->
-    <div class="column">
-        <img src="image/aden1.jpg" alt="aden1" onclick="openModal(this)">
-        <div class="desc">"Expectations Vol 2" Digital graffiti mural<br>By: Aden Thompson</div>
-        <p>"For this I wanted to make something that feels alive all
-            while keeping it simple. To achieve that I made the
-            background a solid purple hue, but kept the vibrance
-            and style from Miles Morales "Expectations" graffiti
-            mural from "Into The Spider-Verse". This piece didn't
-            have any purpose except I felt like drawing Spider-Man,
-            but I'm glad I made this because it's one of my better projects."</p>
-    </div>
+<body>
 
-    <!-- Piece 2 -->
-    <div class="column">
-        <img src="image/aden2.jpg" alt="aden2" onclick="openModal(this)">
-        <div class="desc">"Red Panda" Digital Informal Brochure<br>By: Aden Thompson</div>
-        <p>"What I wanted to go for when making this was to
-			make it look friendly but also catches your attention.
-			Which is why I threw in the green gradient on the
-			landscape. The clashing of the cool greens and warm
-			reds bring the whole thing together. As for the text and
-			other graphics, I put a graphic of the red panda to
-			show what it looks like and gave a little overview of
-			what the red panda represented. The text in the
-			middle means "Firefox" a name given to the red
-			panda by the Chinese.”</p>
-    </div>
-
-	 <!-- Piece 3 -->
-    <div class="column">
-        <img src="image/buch1.jpg" alt="buch1" onclick="openModal(this)">
-        <div class="desc">"The Slush" Wall mural with Outdoor Paint<br>By: Buchanan Carr</div>
-        <p>"Made for the Hoodoo festival 2023. I had the idea to
-            use a grid of squares to create a winding design of my
-            character 'The Slush'. The concept evolved into
-            creating a sort of optical illusion, so that the window
-            would be the back of a long hallway.</p>
-    </div>
-
-    <!-- Piece 4 -->
-    <div class="column">
-        <img src="image/buch2.jpg" alt="buch2" onclick="openModal(this)">
-        <div class="desc">"Home Decor" Acrylic Painting<br>By: Buchanan Carr</div>
-        <p>"Made for the love of bones and skeletons. A custom
-            home piece for my new place. The paisley pattern was
-            inspired from earrings Will Wood from Will Wood and
-            the Tapeworms wore once. Fun thing about this piece
-            is that it's fluorescent under blacklight."</p>
-    </div>
-
-		 <!-- Piece 5 -->
-    <div class="column">
-        <img src="image/char1.jpg" alt="char" onclick="openModal(this)">
-        <div class="desc">"Kylie" Acrylic Painting<br>By: Charlotte Rogers</div>
-        <p>"This painting was done as a gift to my dear friends in 
-			Tennessee who taught me so much. I went over to their 
-			house all the time and Kylie always greeted me.”</p>
-    </div>
-
-    <!-- Piece 6 -->
-    <div class="column">
-        <img src="image/char2.jpg" alt="char2" onclick="openModal(this)">
-        <div class="desc">"Canyon Study" Acrylic Painting<br>By: Charlotte Rogers</div>
-        <p>“This is one of my favorite projects because of how hard I worked on it. 
-			I did it in a painting class with my grandma so that was another
-            reason why this painting is my favorite.”</p>
-    </div>
-
-		 <!-- Piece 7 -->
-    <div class="column">
-        <img src="image/val1.jpg" alt="val1" onclick="openModal(this)">
-        <div class="desc">"Ethereal" Digital Artwork<br>By: Valerie Ramirez</div>
-        <p>“I completed this drawing while I was in the hospital for
-            several weeks after a large part of my arm began
-            swelling. Even after being told by doctors to stop
-            using my hands to not exacerbate the swelling. I
-            continued slowly working on portraits and photo
-            studies. This is one of the pieces that I completed
-            during this time. Although, I can no longer find the
-            photographer of the original photograph this piece
-            is based on, the photograph was retrieved
-            from Pinterest.”</p>
-    </div>
-
-    <!-- Piece 8 -->
-    <div class="column">
-        <img src="image/val2.jpg" alt="val2" onclick="openModal(this)">
-        <div class="desc">"Self Portrait" Digital Artwork<br>By: Valerie Ramirez</div>
-        <p>“This self portrait is really a celebration of my own
-            growth and self appreciation over the years. I chose to
-            use very pronounced blue hues that give a sense of
-            tranquility and peace, reflecting my evolving
-            understanding of myself. Through this art piece I hope
-            to draw the viewer in with the softness of
-            each brushstroke and to give a view into my
-            personal growth through an artistic lens.”</p>
-    </div>
-
-<br><h3>Want to be an art major to do stuff like this?<br><a href="https://www.actx.edu/">Become a Badger&excl;</a></h3>
+</body>
 </main>
-
-<div id="imageModal" class="modal" onclick="closeModal()">
-    <img class="modal-content" id="modalImg">
-</div>
-
+        <!-- Slideshow Containers -->
+   <div id="lightbox1" class="lightbox"></div>
+   <div id="lightbox2" class="lightbox"></div>
+   <div id="lightbox3" class="lightbox"></div>
 <footer>
 <ul>
 			<li><a href="index.html">Home</a></li>

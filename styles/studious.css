@@ -612,8 +612,8 @@ form#orderForm input#buttonAdd {
 }
 
 .product-card p {
-    margin-left: 70px;
     font-size: 30px;
+	text-align: center;
 }
 
 label {

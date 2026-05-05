@@ -601,7 +601,6 @@ form#orderForm input#buttonAdd {
     background-color: #FFE4C4;
     border-radius: 12px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-	align-items: center;
 }
 
 .product-card img {
@@ -614,7 +613,7 @@ form#orderForm input#buttonAdd {
 
 .product-card p {
     font-size: 30px;
-	text-align: center;
+	margin-left: 70px;
 }
 
 label {

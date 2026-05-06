@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width,initial-scale=1.0">
    <title>Studious</title>
-   <link href="styles/studious.css" rel="stylesheet" />
+   <link href="styles/studious.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
    <script src="scripts/studious.js" defer></script>
    <meta name="description" content="Introduction to Gallery">
 </head>
+<body>
 
 <div id="wrapper">
 <div id="container">
@@ -23,15 +25,11 @@
 			<li><a href="estimate.html">Estimate</a></li>
 			<li><a href="advice.html">WoW</a></li>
          <li><a href="store.html">Store</a></li>
-         <a class="nav-button" href="cart.html">Cart</a>
+         <li><a class="nav-button" href="cart.html">Cart</a></li>
 		</ul>
 	</nav>
 
-<!-- Main Content Section -->
-<body>
-
-       
-  <h3>Leave your Words of Wisdom</h3>
+   <h3>Leave your Words of Wisdom</h3>
 
   <form id="adviceForm">
     <input type="text" id="name" placeholder="Your Name" required>
@@ -53,12 +51,23 @@
 			<li><a href="artists.html">Artists</a></li> 
 			<li><a href="contact.html">Contact</a></li>
 			<li><a href="estimate.html">Estimate</a></li>
-         <li><a href="advice.html">WoW</a></li>
-         <li><a href="store.html">Store</a></li>
-         <li><a href="cart.html">Cart</a></li>
-</ul>
+            <li><a href="advice.html">WoW</a></li>
+            <li><a href="store.html">Store</a></li>
+            <li><a href="cart.html">Cart</a></li>
+		</ul>
 
-<br>&copy;2026 Studious<a href="mailto:kassidyanders@outlook.com">Kassidy Anders</a>	
+<div class="layout">
+  <div class="content">
+    <p>Welcome to Amarillo College in Amarillo, TX</p>
+  </div>
+  <div id="map"></div>
+</div>
+
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="scripts/mapscript.js"> </script>
+
+<br>&copy;  2026 Studious<a href="mailto:kassidyanders@outlook.com">Kassidy Anders</a>	
 </footer>
 </div>
 </div>

@@ -1,9 +1,9 @@
-/*  Case Study Project 05
-    Shopping Cart
+/*  Case Study Project 06
+    Map API
     
 
     Author: Kassidy Anders
-    Date: 04/23/2026
+    Date: 05/05/2026
 
     Filename: Studious.js
  */  
@@ -86,61 +86,75 @@ function createLightbox(lightboxId, gallery) {
       document.body.appendChild(overlay);
    }
 }
-// Wrap everything in DOMContentLoaded to ensure elements exist
 document.addEventListener("DOMContentLoaded", function() {
 
     // =========================
     // 2. ART COST CALCULATOR
     // =========================
-const ADEN1_PRICE = 25;
-const BUCH2_PRICE = 40;
-const CHAR1_PRICE = 35;
-const VAL1_PRICE = 30;
-const KAS1_PRICE = 30;
-const KAS3_PRICE = 40;
 
-document.getElementById("aden1").addEventListener("change", calcTotal);
-document.getElementById("buch2").addEventListener("change", calcTotal);
-document.getElementById("char1").addEventListener("change", calcTotal);
-document.getElementById("val1").addEventListener("change", calcTotal);
-document.getElementById("kas1").addEventListener("change", calcTotal);
-document.getElementById("kas3").addEventListener("change", calcTotal);
+    const ADEN1_PRICE = 25;
+    const BUCH2_PRICE = 40;
+    const CHAR1_PRICE = 35;
+    const VAL1_PRICE = 30;
+    const KAS1_PRICE = 30;
+    const KAS3_PRICE = 40;
 
-function calcTotal() {
-   let cost = 0;
+    const checkboxIds = [
+        "aden1",
+        "buch2",
+        "char1",
+        "val1",
+        "kas1",
+        "kas3"
+    ];
 
-   let buyAden1 = document.getElementById("aden1").checked;
-   let buyBuch2 = document.getElementById("buch2").checked;
-   let buyChar1 = document.getElementById("char1").checked;
-   let buyVal1 = document.getElementById("val1").checked;
-   let buyKas1 = document.getElementById("kas1").checked;
-   let buyKas3 = document.getElementById("kas3").checked;
+    checkboxIds.forEach(id => {
+        const checkbox = document.getElementById(id);
 
-   cost += buyAden1 ? ADEN1_PRICE : 0;
-   cost += buyBuch2 ? BUCH2_PRICE : 0;
-   cost += buyChar1 ? CHAR1_PRICE : 0;
-   cost += buyVal1 ? VAL1_PRICE : 0;
-   cost += buyKas1 ? KAS1_PRICE : 0;
-   cost += buyKas3 ? KAS3_PRICE : 0;
+        if (checkbox) {
+            checkbox.addEventListener("change", calcTotal);
+        }
+    });
 
-   document.getElementById("artTotal").innerHTML = formatCurrency(cost);
-}
+    function calcTotal() {
+        let cost = 0;
 
-function formatCurrency(value) {
-    return "$" + value.toFixed(2);
-}
+        if (document.getElementById("aden1")?.checked) cost += ADEN1_PRICE;
+        if (document.getElementById("buch2")?.checked) cost += BUCH2_PRICE;
+        if (document.getElementById("char1")?.checked) cost += CHAR1_PRICE;
+        if (document.getElementById("val1")?.checked) cost += VAL1_PRICE;
+        if (document.getElementById("kas1")?.checked) cost += KAS1_PRICE;
+        if (document.getElementById("kas3")?.checked) cost += KAS3_PRICE;
+
+        const totalElement = document.getElementById("artTotal");
+
+        if (totalElement) {
+            totalElement.innerHTML = formatCurrency(cost);
+        }
+    }
+
+    function formatCurrency(value) {
+        return "$" + value.toFixed(2);
+    }
 
     // =========================
-    // 3. FORM SUBMISSION
+    // 3. CONTACT FORM
     // =========================
+
     const form = document.getElementById('contactForm');
     const successMessage = document.getElementById('successMessage');
 
-    if(form && successMessage) {
+    if (form && successMessage) {
         form.addEventListener('submit', function(e) {
-            e.preventDefault(); // stop actual submission
+            e.preventDefault();
+
             successMessage.style.display = 'block';
+
             form.reset();
+
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+            }, 4000);
         });
     }
 
@@ -257,5 +271,3 @@ for (let i = 0; i < reviewers.length; i++) {
    }
 
 });
-
-

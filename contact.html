@@ -5,6 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="styles/studious.css" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
 <script src="scripts/studious.js"></script>
 <meta name="description" content="Introduction to Gallery">
 </head>
@@ -23,30 +24,34 @@
 			<li><a href="estimate.html">Estimate</a></li>
 			<li><a href="advice.html">WoW</a></li>
 			<li><a href="store.html">Store</a></li>
-			<a class="nav-button" href="cart.html">Cart</a>
+			<li><a class="nav-button" href="cart.html">Cart</a></li>
 		</ul>
 	</nav>
 
 <!-- Main Content Section -->
-<body>
-
 
  <h3>Want to be featured? Contact Us!</h3>
 
     <form id="contactForm">
-        <label for="name">Name</label>
-        <input type="text" id="name" required>
+        <div class="input-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" required />
+        </div>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" required>
+        <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" required />
+        </div>
 
-        <label for="message">Message</label>
-        <textarea id="message" required></textarea>
+        <div class="input-group">
+            <label for="message">Message</label>
+            <textarea id="message" required></textarea>
+        </div>
 
-        <button class="button primary">Send Message</button>
+        <button type="submit">Send Message</button>
     </form>
 
-    <div class="success-message" id="successMessage">
+    <div id="successMessage">
         ✅ Your message has been sent successfully!
     </div>
 
@@ -58,9 +63,21 @@
 			<li><a href="contact.html">Contact</a></li>
 			<li><a href="estimate.html">Estimate</a></li>
             <li><a href="advice.html">WoW</a></li>
-			<li><a href="store.html">Store</a></li>
-			<li><a href="cart.html">Cart</a></li>
+            <li><a href="store.html">Store</a></li>
+            <li><a href="cart.html">Cart</a></li>
 		</ul>
+
+<div class="layout">
+  <div class="content">
+    <p>Welcome to Amarillo College in Amarillo, TX</p>
+  </div>
+  <div id="map"></div>
+</div>
+
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="scripts/mapscript.js"> </script>
+
 <br>&copy;  2026 Studious<a href="mailto:kassidyanders@outlook.com">Kassidy Anders</a>	
 </footer>
 

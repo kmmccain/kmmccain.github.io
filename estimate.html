@@ -5,6 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="styles/studious.css" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
 <script src="scripts/studious.js"></script>
 <meta name="description" content="Introduction to Gallery">
 </head>
@@ -23,11 +24,10 @@
 			<li><a href="estimate.html">Estimate</a></li>
 			<li><a href="advice.html">WoW</a></li>
             <li><a href="store.html">Store</a></li>
-            <a class="nav-button" href="cart.html">Cart</a>
+            <li><a class="nav-button" href="cart.html">Cart</a></li>
 		</ul>
 	</nav>
-</head>
-<body>
+
 
 <h3>Art Cost Calculator</h3>
 
@@ -36,7 +36,7 @@
     <label class="art-card">
         <input type="checkbox" id="aden1">
         <img src="image/aden1.jpg" alt="Aden1 Art">
-         <input type="submit" id="buttonAdd" value="add to cart" />
+         <input type="submit" id="buttonAdd" value="add to cart"/>
         <p>Expectations Vol 2 <br> $25</p>
        
     </label>
@@ -77,7 +77,6 @@
     Total: <span id="artTotal">$0.00</span>
 </div>
 
-</body>
 
 <a href="store.html">
     <button class="button primary">Click here to start shopping</button>
@@ -94,6 +93,21 @@
             <li><a href="store.html">Store</a></li>
             <li><a href="cart.html">Cart</a></li>
 		</ul>
-<br>&copy;  2026 Studious<a href="mailto:kassidyanders@outlook.com">Kassidy Anders</a>	
+
+<div class="layout">
+  <div class="content">
+    <p>Welcome to Amarillo College in Amarillo, TX</p>
+  </div>
+  <div id="map"></div>
+</div>
+
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="scripts/mapscript.js"> </script>
+
+<br>&copy;  2026 Studious<a href="mailto:kassidyanders@outlook.com">Kassidy Anders</a>
 </footer>
+</div>
+</div>
+</body>
 </html>

@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studious</title>
     <link rel="stylesheet" href="styles/studious.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
     <script src="scripts/common.js"></script>
     <script src="scripts/store.js"></script>
 	
 </head>
 
+<body onload="displayProducts()">
 <div id="wrapper">
 <div id="container">
     
-<body onload="displayProducts()">
 <header>
 
 	<h1>Studious</h1>
@@ -27,7 +28,7 @@
                     <li><a href="estimate.html">Estimate</a></li>
                     <li><a href="advice.html">WoW</a></li>
                     <li><a href="store.html">Store</a></li>
-                    <a class="nav-button" href="cart.html">Cart</a>
+                    <li><a class="nav-button" href="cart.html">Cart</a></li>
 		        </ul>
 	    </nav>
 
@@ -47,10 +48,21 @@
             <li><a href="store.html">Store</a></li>
             <li><a href="cart.html">Cart</a></li>
 		</ul>
+
+<div class="layout">
+  <div class="content">
+    <p>Welcome to Amarillo College in Amarillo, TX</p>
+  </div>
+  <div id="map"></div>
+</div>
+
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="scripts/mapscript.js"> </script>
+
 <br>&copy;  2026 Studious<a href="mailto:kassidyanders@outlook.com">Kassidy Anders</a>	
 </footer>
 </div>
 </div>
-</body>
 </body>
 </html>
